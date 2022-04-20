@@ -5,10 +5,17 @@ Show them when they receive the class 'on'
 Hide them when they receive the class 'off'
 Feel free to adjust the defaults to your needs.
 ********************************************** */
+
+#video-placeholder {
+	display: block; margin: auto;
+	top: 10%;
+}
+
 #closed-captions p {
 	opacity: 0;
 	transition: .05s;
 	position: absolute;
+	
 }
 #closed-captions .on {
 	opacity: 1;
@@ -18,8 +25,27 @@ Feel free to adjust the defaults to your needs.
 	opacity: 0;
 }
 .voice1 {
-	font-style: italic;
+	font-family: helvetica;
+	
+	font-size: 40px;
+	background-color: yellow;
+	position: absolute;
+	right: 60%;
+	margin-right: 5%;
+	margin-left: 5%;
 }
+.voice2 {
+	
+	font-family: arial;
+	font-size: 40px;
+	background-color: aqua;
+	position: absolute;
+	left: 60%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+
 
 /* **********************************************
 The first paragraph, with extended timing for 
@@ -95,6 +121,10 @@ You probably want to change the styling.
 	font-family: "brenner slab";
 }
 
+.p1 {
+	background-color: rgb(245, 99, 73);
+}
+
 /* **********************************************
 Sounds.
 	You can style the whole body, or you can 
@@ -103,8 +133,22 @@ Sounds.
 *********************************************  */
 
 /* The moment the class .sound1 is added to the body, the background is yellow */
+.sound0 {
+	background: black;
+	height: 100%;
+}
+
 .sound1 {
-	background: yellow;
+	background: rgb(0,0,0);
+	height: 100%;
+}
+.sound2 {
+	background: red;
+	height: 100%;
+}
+
+.sound3 {
+	background: black;
 }
 
 iframe {
@@ -114,3 +158,9 @@ iframe {
 .sound1 iframe {
 	transform: rotate(1turn);
 }
+
+.sound2 iframe {
+	transform: rotate(2turn);
+}
+
+
