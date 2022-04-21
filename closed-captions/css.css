@@ -32,10 +32,9 @@ iframe {
 	opacity: 0;
 }
 .voice1 {
-	font-family: helvetica;
-	
+	font-family: brenner mono light;
+	color: greenyellow;
 	font-size: 40px;
-	background-color: yellow;
 	position: absolute;
 	right: 60%;
 	margin-right: 5%;
@@ -43,18 +42,15 @@ iframe {
 }
 .voice2 {
 	
-	font-family: arial;
+	font-family: brenner;
 	font-size: 40px;
-	background-color: aqua;
+	color: white;
 	position: absolute;
 	left: 60%;
 	margin-left: 5%;
 	margin-right: 5%;
 	top: 70%;
 }
-
-
-
 /* **********************************************
 The first paragraph, with extended timing for 
 	all siblings. Basically what it does is that
@@ -132,7 +128,16 @@ You probably want to change the styling.
 .p1 {
 	background-color: rgb(245, 99, 73);
 }
+.p3 {
+	animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
 
+@keyframes flip {
+	0%,80% {
+	  transform: rotateY(360deg) 
+	}
+}
 /* **********************************************
 Sounds.
 	You can style the whole body, or you can 
@@ -145,13 +150,12 @@ Sounds.
 	background: black;
 	
 }
-
 .sound1 {
-	background: rgb(0,0,0);
+	background: red;
 	
 }
 .sound2 {
-	background: red;
+	background:black;
 	
 }
 
@@ -162,14 +166,17 @@ Sounds.
 iframe {
 	transition: 1s;
 }
-/* The moment the class .sound1 is added to the body, the movie makes a turn */
-.sound1 iframe {
-	transform: rotate(1turn);
-}
 /* de achtergrond wordt rood en de video schud*/
-.sound2 iframe {
+
+.sound1 iframe {
 	animation: 1s shake ;
 	animation-fill-mode: forwards;
+}
+/* The moment the class .sound2 is added to the body, the movie makes a turn */
+.sound3 iframe {
+	animation: 3s spin;
+	animation-fill-mode: forwards;
+	
 }
 
 @keyframes shake {
@@ -181,6 +188,14 @@ iframe {
     100% { transform: skewX(0deg); }  
   }
 
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
 
 
 
