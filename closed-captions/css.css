@@ -5,11 +5,18 @@ Show them when they receive the class 'on'
 Hide them when they receive the class 'off'
 Feel free to adjust the defaults to your needs.
 ********************************************** */
-
-#video-placeholder {
-	display: block; margin: auto;
-	top: 10%;
-}
+body {
+	background: black;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	grid-template-rows: 1fr auto auto 1fr;
+	height: 100vh;
+   }
+iframe {
+	grid-column-start: 2;
+	grid-row-start: 2;
+   }
 
 #closed-captions p {
 	opacity: 0;
@@ -43,6 +50,7 @@ Feel free to adjust the defaults to your needs.
 	left: 60%;
 	margin-left: 5%;
 	margin-right: 5%;
+	top: 70%;
 }
 
 
@@ -135,16 +143,16 @@ Sounds.
 /* The moment the class .sound1 is added to the body, the background is yellow */
 .sound0 {
 	background: black;
-	height: 100%;
+	
 }
 
 .sound1 {
 	background: rgb(0,0,0);
-	height: 100%;
+	
 }
 .sound2 {
 	background: red;
-	height: 100%;
+	
 }
 
 .sound3 {
@@ -158,9 +166,21 @@ iframe {
 .sound1 iframe {
 	transform: rotate(1turn);
 }
-
+/* de achtergrond wordt rood en de video schud*/
 .sound2 iframe {
-	transform: rotate(2turn);
+	animation: 1s shake ;
+	animation-fill-mode: forwards;
 }
+
+@keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
+  }
+
+
 
 
