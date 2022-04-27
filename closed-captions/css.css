@@ -21,7 +21,7 @@ body {
 iframe {
 	grid-column-start: 2;
 	grid-row-start: 2;
-	clip-path: inset(4.7em 0);
+	/* clip-path: inset(4.7em 0);*/
    }
 
 #closed-captions p {
@@ -55,6 +55,21 @@ iframe {
 	margin-right: 5%;
 	top: 70%;
 }
+.voice3 {
+	font-family: Brenner Mono Regular Italic;
+	font-size: 2em;
+	color:red;
+	left: 7em;
+	
+}
+.voice4 {
+	font-family: brenner mono light;
+	font-size: 2em;
+	color: rgb(87, 151, 204);
+	top: 1em;
+	right: 5em;
+}
+
 /* **********************************************
 The first paragraph, with extended timing for 
 	all siblings. Basically what it does is that
@@ -134,7 +149,15 @@ You probably want to change the styling.
 	color: white;
 	font-family: brenner sans medium;
 }
-
+.p8 {
+	color: black;
+}
+.p9 {
+	color: black;
+}
+.p10 {
+	color: black;
+}
 
 /* **********************************************
 Sounds.
@@ -249,16 +272,24 @@ Sounds.
 .sound10 {
 	background: white;
 	animation: 10s vibrate;
+	
+}
+.sound10 .voice2 {
+	color: orange;
+}
+.sound10 .voice1 {
+	color: black;
 }
 .sound10 {
 	
 	animation: 1s flash ;
 	animation-duration: 10s;
 }
-.sound11 iframe{
+.sound11 iframe {
 	animation: 42s zoomin;
 
 }
+
 
 @keyframes shake {
     0% { transform: skewX(-15deg); }
